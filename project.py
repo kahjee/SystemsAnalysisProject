@@ -1,6 +1,10 @@
+from email.headerregistry import Address
 from tkinter import*
-
+import datetime
 from numpy import pad
+import random
+
+import backend
 
 root = Tk()
 
@@ -27,6 +31,27 @@ RightFrame3.grid(row=3, column=0)
 
 BottomFrame = Frame(MainFrame, bd=10, width=1350, height=150, padx=2, relief=RIDGE)
 BottomFrame.pack(side=BOTTOM)
+
+global cd
+FirstName = StringVar()
+LastName = StringVar()
+Contact = StringVar()
+CusAddress = StringVar()
+Room = StringVar()
+
+NoOfDays = StringVar()
+SubTotal = StringVar()
+PaidTax = StringVar()
+
+DateIn = StringVar()
+DateOut = StringVar()
+
+DateIn.set(time.strftime("%d/%m/%y"))
+DateIn.set(time.strftime("%d/%m/%y"))
+
+rand = random.randint(1190, 8000)
+
+
 
 #=======================================LEFT WIDGETS==================================================
 root.lblCusID = Label(LeftFrame, font=('arial', 12,'bold'), text="Customer No:", padx=1)
